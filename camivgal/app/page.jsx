@@ -1,10 +1,13 @@
 import Image from 'next/image';
+import footer from '@/public/img/Footer.webp' 
 
 export default function Home() {
     return (
         <main>
-        <div className="text-grey-500 flex w-full justify-center bg-blue-500" >
-            Bienvenue chez Camivgal, pour découvrir les sites touristiques du Cameroun, la Cote D'Ivoire et le Sénégal!
+             <div className='footer bg-cover bg-center' style={{ backgroundImage: `url(${footer.src})` , height: '400px' }}>
+                <div className=" flex items-center justify-center w-full h-full  font-serif  " >
+                    <p className='text-xl text-white'> Bienvenue chez Camivgal, pour découvrir le Cameroun, la Cote D'Ivoire et le Sénégal!</p> 
+            </div>
         </div>
         </main>
     );
