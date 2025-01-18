@@ -6,9 +6,9 @@
 
 ## Liens utiles pour notre projet
 
-### Cameroun https://generationvoyage.fr/endroits-visiter-cameroun/
+### Cameroun (Par Salihou Kingue) https://generationvoyage.fr/endroits-visiter-cameroun/
 
-### CIV  https://discover-ivorycoast.com/les-attractions/
+### CIV (Par Prunelle Eckshar) https://discover-ivorycoast.com/les-attractions/
 
-### Senegal https://generationvoyage.fr/endroits-visiter-senegal/
+### Senegal (Par Bara DJigal) https://generationvoyage.fr/endroits-visiter-senegal/
 
