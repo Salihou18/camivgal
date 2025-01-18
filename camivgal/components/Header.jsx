@@ -1,6 +1,6 @@
 import { IoMdMenu } from "react-icons/io";
 import Image from 'next/image';
-import logo from '@/public/img/react.webp' 
+import logo from '@/public/img/Logo.webp' 
 
 export default function Header(){
     return <header>
