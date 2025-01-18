@@ -12,3 +12,10 @@
 
 ### Senegal https://generationvoyage.fr/endroits-visiter-senegal/
 
+## Choix de couleurs 
+## Noms des membres
+**
+Bara Djigal
+Salihou Kingue
+Gui Prunelle
+**
