@@ -1,0 +1,29 @@
+.footer {
+    padding: 1rem;
+    background-color: var(--first-color); /* Même couleur que le Header */
+    text-align: center;
+    color: #fff; /* Texte en blanc */
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none; 
+}
+
+.footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #ddd; 
+}
