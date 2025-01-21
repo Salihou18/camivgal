@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Footer from '@/components/Footer';
 import footer from '@/public/img/Footer.webp' 
 
 
@@ -14,7 +15,7 @@ export default function Home() {
 
              </div>
             
-             <div className='text-3xl flex items-center justify-center span: 10' >Nos Services</div>
+            
 
              </div>
 
