@@ -14,69 +14,56 @@ export default function Header(){
             width={80}
         />
         <ul className="hidden md:flex justify-center gap-x-10 px-80 ">
-            <li><a href='#' className="text-gray-700 hover:text-blue-500 active:text-green-500">Accueil</a></li>
-            <li><a href='#'className="text-gray-700 hover:text-blue-500 active:text-green-500">Activités</a></li>
+            <li><button className="text-gray-700 hover:text-blue-500 active:text-green-500">Accueil</button></li>
+            <li><button className="text-gray-700 hover:text-blue-500 active:text-green-500">Activités</button></li>
               {/* Contact avec menu déroulant */}
-              <li className="relative group">    <a href="#" className="text-gray-700 hover:text-blue-500 active:text-green-500 flex items-center">
+              <li className="relative group">   
+                 <button className="text-gray-700 hover:text-blue-500 active:text-green-500 flex items-center">
                             Contact
                             {/* Flèche à droite */}
                             <span className="ml-2 text-sm"><IoIosArrowDown /></span>
-                        </a>
+                        </button>
                         {/* Menu déroulant */}
                         <ul className="absolute left-0 hidden mt-2 space-y-2 bg-white shadow-lg group-hover:block">
                             <li>
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-100">A propos de nous</a>
+                                <button className="block px-4 py-2 text-gray-700 hover:bg-blue-100">A propos de nous</button>
                             </li>
                             <li>
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-100">Formulaire de réservation</a>
+                                <button className="block px-4 py-2 text-gray-700 hover:bg-blue-100">Formulaire de réservation</button>
                             </li>
                         </ul>
                     </li> 
              {/* Cameroun avec menu déroulant */}
-             <li className="relative group">    <a href="#" className="text-gray-700 hover:text-blue-500 active:text-green-500 flex items-center">
+             <li className="relative group">    <button className="text-gray-700 hover:text-blue-500 active:text-green-500 flex items-center">
                             Cameroun
                             {/* Flèche à droite */}
                             <span className="ml-2 text-sm"><IoIosArrowDown /></span>
-                        </a>
+                        </button>
                         {/* Menu déroulant */}
                         <ul className="absolute left-0 hidden mt-2 space-y-2 bg-white shadow-lg group-hover:block">
                             <li>
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-100">Douala</a>
+                                <button className="block px-4 py-2 text-gray-700 hover:bg-blue-100">Douala</button>
                             </li>
                             <li>
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-100">Yaoundé</a>
-                            </li>
-                        </ul>
-                    </li>
-              {/* Cote D'Ivoire avec menu déroulant */}
-              <li className="relative group">    <a href="#" className="text-gray-700 hover:text-blue-500 active:text-green-500 flex items-center">
-                    Cote D'Ivoire
-                            {/* Flèche à droite */}
-                            <span className="ml-2 text-sm"><IoIosArrowDown /></span>
-                        </a>
-                        {/* Menu déroulant */}
-                        <ul className="absolute left-0 hidden mt-2 space-y-2 bg-white shadow-lg group-hover:block">
-                            <li>
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-100">Douala</a>
-                            </li>
-                            <li>
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-100">Yaoundé</a>
+                                <button className="block px-4 py-2 text-gray-700 hover:bg-blue-100">Yaoundé</button>
                             </li>
                         </ul>
                     </li>
                        {/* Sénégal avec menu déroulant */}
-             <li className="relative group">    <a href="#" className="text-gray-700 hover:text-blue-500 active:text-green-500 flex items-center">
+             <li className="relative group">  
+                {/* Bouton principal */}  
+                <button className="text-gray-700 hover:text-blue-500 active:text-green-500 flex items-center">
                         Sénégal
                             {/* Flèche à droite */}
                             <span className="ml-2 text-sm"><IoIosArrowDown /></span>
-                        </a>
+                        </button>
                         {/* Menu déroulant */}
-                        <ul className="absolute left-0 hidden mt-2 space-y-2 bg-white shadow-lg group-hover:block">
+                        <ul className="absolute left-0 hidden mt-2 space-y-2 bg-white shadow-lg group-hover:block group-focus-within:block">
                             <li>
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-100">Douala</a>
+                                <button className="block px-4 py-2 text-gray-700 hover:bg-blue-100">Dakar</button>
                             </li>
                             <li>
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-100">Yaoundé</a>
+                                <button className="block px-4 py-2 text-gray-700 hover:bg-blue-100">Touba</button>
                             </li>
                         </ul>
                     </li>
