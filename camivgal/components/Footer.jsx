@@ -6,9 +6,9 @@ export default function Footer() {
             <nav className={styles.nav}>
                 <ul>
                     <li><a href='#'>À propos</a></li>
-                    <li><a href='#'></a></li>
-                    <li><a href='#'></a></li>
-                    <li><a href='#'>Nous contacter</a></li>
+                    <li><a href='#'>Evenements</a></li>
+                    <li><a href='#'>Visites</a></li>
+                    <li><a href='#'>Contactez-nous</a></li>
                 </ul>
             </nav>
             <p>&copy; {new Date().getFullYear()} Camivgal. Tous droits réservés.</p>

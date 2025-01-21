@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Camivgal_app',
-  description: 'Découvrez les sites touristiques du Cameroun, la Côte d\'Ivoire et le Sénégal!',
+  description: 'Découvrir les sites touristiques.',
 };
 
 export default function RootLayout({ children }) {

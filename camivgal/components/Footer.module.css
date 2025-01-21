@@ -1,6 +1,6 @@
 .footer {
     padding: 1rem;
-    background-color: var(--first-color); /* Même couleur que le Header */
+    background-color: black;
     text-align: center;
     color: #fff; /* Texte en blanc */
 }
