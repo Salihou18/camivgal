@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="bg-black text-white text-center p-4 , mt-20">
+        <footer className="bg-blue-500 text-white text-center p-4 , mt-20">
 
         <div className='text-3xl flex items-center justify-center span: 10' >Nos Services</div>
             <nav>
