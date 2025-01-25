@@ -5,7 +5,7 @@ import logo from '@/public/img/Logo.webp'
 
 export default function Header(){
     return <header>
-    <nav className="flex items-center justify-between px-40 py-3 bg-gray-25 shadow-md relative">
+    <nav className="flex items-center justify-between px-5 py-1 bg-gray-25 shadow-md relative">
       {/* Menu burger visible uniquement sur mobile */}
       <IoMdMenu className="text-2xl md:hidden" />
         <Image
@@ -13,7 +13,7 @@ export default function Header(){
             alt='Logo'
             width={80}
         />
-        <ul className="hidden md:flex justify-center gap-x-10 px-80 ">
+        <ul className="hidden md:flex justify-center gap-x-10 px-10 flex-grow ">
             <li><button className="text-gray-700 hover:text-blue-500 active:text-green-500">Accueil</button></li>
             <li><button className="text-gray-700 hover:text-blue-500 active:text-green-500">Activités</button></li>
               {/* Contact avec menu déroulant */}
@@ -24,7 +24,7 @@ export default function Header(){
                             <span className="ml-2 text-sm"><IoIosArrowDown /></span>
                         </button>
                         {/* Menu déroulant */}
-                        <ul className="absolute left-0 hidden mt-2 space-y-2 bg-white shadow-lg group-hover:block">
+                        <ul className="absolute left-0 hidden mt-0 space-y-2 bg-white shadow-lg group-hover:block">
                             <li>
                                 <button className="block px-4 py-2 text-gray-700 hover:bg-blue-100">A propos de nous</button>
                             </li>
@@ -34,13 +34,14 @@ export default function Header(){
                         </ul>
                     </li> 
              {/* Cameroun avec menu déroulant */}
-             <li className="relative group">    <button className="text-gray-700 hover:text-blue-500 active:text-green-500 flex items-center">
+             <li className="relative group">   
+                 <button className="text-gray-700 hover:text-blue-500 active:text-green-500 flex items-center">
                             Cameroun
                             {/* Flèche à droite */}
                             <span className="ml-2 text-sm"><IoIosArrowDown /></span>
                         </button>
                         {/* Menu déroulant */}
-                        <ul className="absolute left-0 hidden mt-2 space-y-2 bg-white shadow-lg group-hover:block">
+                        <ul className="absolute left-0 hidden mt-0 space-y-2 bg-white shadow-lg group-hover:block">
                             <li>
                                 <button className="block px-4 py-2 text-gray-700 hover:bg-blue-100">Douala</button>
                             </li>
@@ -58,7 +59,7 @@ export default function Header(){
                             <span className="ml-2 text-sm"><IoIosArrowDown /></span>
                         </button>
                         {/* Menu déroulant */}
-                        <ul className="absolute left-0 hidden mt-2 space-y-2 bg-white shadow-lg group-hover:block group-focus-within:block">
+                        <ul className="absolute left-0 hidden mt-0 space-y-2 bg-white shadow-lg group-hover:block group-focus-within: ">
                             <li>
                                 <button className="block px-4 py-2 text-gray-700 hover:bg-blue-100">Dakar</button>
                             </li>
