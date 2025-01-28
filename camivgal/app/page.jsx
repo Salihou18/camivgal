@@ -9,7 +9,7 @@ export default function Home() {
                 className='footer bg-cover bg-center flex items-center justify-center font-serif'
                 style={{ 
                     backgroundImage: `url(${footer.src})`, 
-                    height: '200px' 
+                    height: '400px'
                 }}
             >
                 <p className='text-3xl text-white text-center leading-relaxed font-bold animate-scan'>
