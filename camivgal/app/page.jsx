@@ -1,8 +1,40 @@
 import Image from 'next/image';
 import footer from '@/public/img/Footer.webp';
-
+import girrafe from '@/public/img/Girrafe.webp';
+import Monument_de_la_Reunification from '@/public/img/Monument_de_la_Reunification.webp';
+import monument_de_la_renaissance_africaine from '@/public/img/monument_de_la_renaissance_africaine.webp';
+import CircuitCam from '@/public/img/CircuitCam.webp';
+import CircuitSen from '@/public/img/CircuitSen.webp';
+import CircuitCiv from '@/public/img/CircuitCiv.webp';
+import TourismeCam from '@/public/img/TourismeCam.webp';
+import TourismeSen from '@/public/img/TourismeSen.webp';
+import TourismeCiv from '@/public/img/TourismeCiv.webp';
+import ServicesSection from './ServicesSection';
 
 export default function Home() {
+
+    const services = [
+        { title: 'Culture du Cameroun', image: Monument_de_la_Reunification },
+        { title: 'Culture de la Côte d\'Ivoire', image: girrafe },
+        { title: 'Culture du Sénégal', image: monument_de_la_renaissance_africaine }
+    ];
+
+    const circuits = [
+        { title: 'Circuits du Cameroun', image: CircuitCam },
+        { title: 'Circuits de la Côte d\'Ivoire', image: CircuitCiv },
+        { title: 'Circuits du Sénégal', image: CircuitSen }
+    ];
+
+    const tourisme = [
+        { title: 'Tourisme du Cameroun', image: TourismeCam },
+        { title: 'Tourisme de la Côte d\'Ivoire', image: TourismeCiv },
+        { title: 'Tourisme du Sénégal', image: TourismeSen }
+    ];
+
+
+    
+
+   
     return (
         <main className='space-y-8'>
             <section 
@@ -17,59 +49,15 @@ export default function Home() {
                 </p>
             </section>
 
-            <section className='nos-services py-8 bg-gray-100'>
-                <h2 className='text-2xl font-bold text-center mb-4'>Nos Services</h2>
-                <div className='flex flex-wrap justify-center space-x-4'>
-                    <div className='service-card p-4 bg-white shadow-md rounded-md w-64 text-center'>
-                        <h3 className='text-xl font-semibold mb-2'>Culture du Cameroun</h3>
-                        <p className='text-gray-600'>Description .</p>
-                    </div>
-                    <div className='service-card p-4 bg-white shadow-md rounded-md w-64 text-center'>
-                        <h3 className='text-xl font-semibold mb-2'>Culture de la cote d'Ivoire</h3>
-                        <p className='text-gray-600'>Description .</p>
-                    </div>
-                    <div className='service-card p-4 bg-white shadow-md rounded-md w-64 text-center'>
-                        <h3 className='text-xl font-semibold mb-2'>Culture du Senegal</h3>
-                        <p className='text-gray-600'>Description .</p>
-                    </div>
-                </div>
-            </section>
+       {/*section des services */}
+       <ServicesSection title="Nos Services" services={services} />
+           
+              {/*section des circuits */}
+        <ServicesSection title="Nos Circuits" services={circuits} />
 
-            <section className='nos-circuits py-8 bg-white'>
-                <h2 className='text-2xl font-bold text-center mb-4'>Nos Circuits</h2>
-                <div className='flex flex-wrap justify-center space-x-4'>
-                    <div className='circuit-card p-4 bg-gray-100 shadow-md rounded-md w-64 text-center'>
-                        <h3 className='text-xl font-semibold mb-2'>Circuit au Cameroun</h3>
-                        <p className='text-gray-600'>Description .</p>
-                    </div>
-                    <div className='circuit-card p-4 bg-gray-100 shadow-md rounded-md w-64 text-center'>
-                        <h3 className='text-xl font-semibold mb-2'>Circuit en cote d'Ivoire</h3>
-                        <p className='text-gray-600'>Description .</p>
-                    </div>
-                    <div className='circuit-card p-4 bg-gray-100 shadow-md rounded-md w-64 text-center'>
-                        <h3 className='text-xl font-semibold mb-2'>Circuit au Senegal</h3>
-                        <p className='text-gray-600'>Description .</p>
-                    </div>
-                </div>
-            </section>
-
-            <section className='tourisme py-8 bg-gray-50'>
-                <h2 className='text-2xl font-bold text-center mb-4'>Tourisme</h2>
-                <div className='flex flex-wrap justify-center space-x-4'>
-                    <div className='tourisme-card p-4 bg-white shadow-md rounded-md w-64 text-center'>
-                        <h3 className='text-xl font-semibold mb-2'>Tourisme au Cameroun</h3>
-                        <p className='text-gray-600'>Description .</p>
-                    </div>
-                    <div className='tourisme-card p-4 bg-white shadow-md rounded-md w-64 text-center'>
-                        <h3 className='text-xl font-semibold mb-2'>Tourisme en cote d'Ivoire</h3>
-                        <p className='text-gray-600'>Description .</p>
-                    </div>
-                    <div className='tourisme-card p-4 bg-white shadow-md rounded-md w-64 text-center'>
-                        <h3 className='text-xl font-semibold mb-2'>Tourisme au Senegal </h3>
-                        <p className='text-gray-600'>Description .</p>
-                    </div>
-                </div>
-            </section>
+              {/*section pour le tourisme */}
+              <ServicesSection title="Tourisme" services={tourisme} />    
+     
         </main>
     );
 }
