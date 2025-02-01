@@ -2,9 +2,10 @@ import React from 'react';
 
 const ServicesSection = ({ title, services, className = 'py-10 bg-white' }) => {
     return (
-        <section className={`nos-services ${className}`}>
+        <section className={`nos-services ${className}`} >
             <h2 className='text-2xl font-bold text-center mb-4'>{title}</h2>
-            <div className='flex flex-wrap justify-center space-x-10'>
+            
+            <div className='flex flex-wrap justify-center gap-6'>
                 {services.map((service, index) => (
                     <div key={index} className='service-card p-4 shadow-md rounded-md w-64 text-center text-white flex items-end justify-center' 
                         style={{ 

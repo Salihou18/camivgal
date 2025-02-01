@@ -9,9 +9,11 @@ import CircuitCiv from '@/public/img/CircuitCiv.webp';
 import TourismeCam from '@/public/img/TourismeCam.webp';
 import TourismeSen from '@/public/img/TourismeSen.webp';
 import TourismeCiv from '@/public/img/TourismeCiv.webp';
-import ServicesSection from './ServicesSection';
+import ServicesSection from '../components/ServicesSection';
 
 export default function Home() {
+
+    {/* variables utilisant le composant ServiceSection pour l'affichage repetitif*/}
 
     const services = [
         { title: 'Culture du Cameroun', image: Monument_de_la_Reunification },
@@ -30,15 +32,10 @@ export default function Home() {
         { title: 'Tourisme de la Côte d\'Ivoire', image: TourismeCiv },
         { title: 'Tourisme du Sénégal', image: TourismeSen }
     ];
-
-
-    
-
    
     return (
         <main className='space-y-8'>
-            <section 
-                className='footer bg-cover bg-center flex items-center justify-center font-serif'
+            <section  className='footer bg-cover bg-center flex items-center justify-center font-serif'
                 style={{ 
                     backgroundImage: `url(${footer.src})`, 
                     height: '400px'
