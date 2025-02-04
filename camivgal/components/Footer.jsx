@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="bg-black text-center p-4 , mt-20">
+        <footer className="bg-black text-center p-4 , mt-21">
 
         
             <nav>
