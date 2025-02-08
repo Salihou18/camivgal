@@ -1,5 +1,6 @@
 import React from 'react';
 
+     {/* composant reutilisable pour la definition des sections de la page d'accueil*/}
 const ServicesSection = ({ title, services, className = 'py-10 bg-white' }) => {
     return (
         <section className={`nos-services ${className}`} >

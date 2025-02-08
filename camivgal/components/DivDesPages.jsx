@@ -1,21 +1,25 @@
 import React from 'react';
 
-const DivDesPages = ({ img, text }) => {
+const DivDesPages = ({ img, text, isImageLeft }) => {
     return (
-        <section className="flex items-center justify-between w-full my-6 px-10">
-            {/* Image à gauche */}
+        
+        <section className={`flex items-center justify-between w-full my-6 px-10 ${isImageLeft ? '' : 'flex-row-reverse'}`}>
+            {/* si isImageLeft est true l'image sera a gauche et le texte a droite */}
+           
+            {/* Image */}
             <div 
                 className="w-[350px] h-[300px] bg-cover bg-center"
                 style={{ backgroundImage: `url(${img})` }}
-            >
-            </div>
+            ></div>
 
-            {/* Texte à droite */}
+            {/* Texte */}
             <div className="w-[950px] h-[300px] flex items-center justify-center p-6 bg-gray-100 shadow-lg rounded-lg">
-                <p className="text-gray-800 text-lg">{text}</p>
+            <p className="text-gray-800 text-sm sm:text-base md:text-lg lg:text-xl">{text}</p>
+
             </div>
         </section>
     );
 };
+
 
 export default DivDesPages;
