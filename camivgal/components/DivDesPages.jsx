@@ -8,12 +8,12 @@ const DivDesPages = ({ img, text, isImageLeft }) => {
            
             {/* Image */}
             <div 
-                className="w-[350px] h-[300px] bg-cover bg-center"
+                className="w-[450px] h-[300px] bg-cover bg-center"
                 style={{ backgroundImage: `url(${img})` }}
             ></div>
 
             {/* Texte */}
-            <div className="w-[950px] h-[300px] flex items-center justify-center p-6 bg-gray-100 shadow-lg rounded-lg">
+            <div className="w-[950px] h-[300px] flex items-center justify-center p-6 bg-white-100 shadow-lg rounded-lg">
             <p className="text-gray-800 text-sm sm:text-base md:text-lg lg:text-xl">{text}</p>
 
             </div>
