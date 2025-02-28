@@ -16,28 +16,14 @@ export default function RootLayout({ children }) {
     const [page, setPage] = useState("home");
 
     return (
-        <html lang='en'>
-            <body className={inter.className}>
-                <div className="flex flex-col min-h-screen">
-                    <Header changePage={setPage} />
-                    <main className="flex-1">
-                        {page === "activites" ? (
-                            <Activites />
-                        ) : page === "contact" ? (
-                            <Contact />
-                        ) : page === "cameroun" ? (
-                            <Cameroun />
-                        ) : page === "cote" ? (
-                            <Cote_D_Ivoire />
-                        ) : page === "senegal" ? (
-                            <Senegal />
-                        ) : (
-                            children
-                        )}
-                    </main>
-                    <Footer />
-                </div>
-            </body>
-        </html>
+      <html lang="en">
+        <body className={inter.className}>
+          <div className="flex flex-col min-h-screen">
+            <Header changePage={setPage} />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </body>
+      </html>
     );
 }
