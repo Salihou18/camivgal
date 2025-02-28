@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+
+  //variables pour la validation du formulaire
   const {
     register,
     handleSubmit,
@@ -11,7 +13,7 @@ export default function Contact() {
     watch,
   } = useForm({
     defaultValues: {
-      nom: 'Sedric',
+      nom: 'Salihou',
     },
   });
 
@@ -37,7 +39,7 @@ export default function Contact() {
 
      // Envoi de l'email avec EmailJS
      const response = await emailjs.send(
-       'service_vgc8feq', // Service ID
+       'service_r5xdpwo', // Service ID
        'template_38y2ib5', // Template ID
        templateParams,
        'CBEyuwpu_0GUrmeuT' // User Public Key
@@ -51,7 +53,7 @@ export default function Contact() {
 
 
   return (
-    <div className="flex justify-center mt-10">
+    <div className="flex justify-center mt-10 min-h-screen">
       <form
         onSubmit={handleSubmit(sendMail)}
         className="flex gap-4 flex-col min-w-96"
