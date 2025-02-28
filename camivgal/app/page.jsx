@@ -34,27 +34,28 @@ export default function Home() {
     ];
    
     return (
-        <main className='space-y-8'>
-            <section  className='footer bg-cover bg-center flex items-center justify-center font-serif'
-                style={{ 
-                    backgroundImage: `url(${footer.src})`, 
-                    height: '400px'
-                }}
-            >
-                <p className='text-3xl text-white text-center leading-relaxed font-bold animate-scan'>
-                    Bienvenue chez Camivgal, pour découvrir le Cameroun, la Côte d'Ivoire et le Sénégal !
-                </p>
-            </section>
+      <main className="space-y-8">
+        <section
+          className="footer bg-gray-500 bg-cover bg-center flex items-center justify-center font-serif"
+          style={{
+            // backgroundImage: `url(${footer.src})`,
+            height: '400px',
+          }}
+        >
+          <p className="text-3xl text-white text-center leading-relaxed font-bold animate-scan">
+            Bienvenue chez Camivgal, pour découvrir le Cameroun, la Côte
+            d'Ivoire et le Sénégal !
+          </p>
+        </section>
 
-       {/*section des services */}
-       <ServicesSection title="Nos Services" services={services} />
-           
-              {/*section des circuits */}
+        {/*section des services */}
+        <ServicesSection title="Nos Services" services={services} />
+
+        {/*section des circuits */}
         <ServicesSection title="Nos Circuits" services={circuits} />
 
-              {/*section pour le tourisme */}
-              <ServicesSection title="Tourisme" services={tourisme} />    
-     
-        </main>
+        {/*section pour le tourisme */}
+        <ServicesSection title="Tourisme" services={tourisme} />
+      </main>
     );
 }

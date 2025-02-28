@@ -6,7 +6,7 @@ import logo from '@/public/img/Logo.webp'
 
 export default function Header({changePage}){
     return  (<header>
-    <nav className="flex items-center justify-between px-5 py-1 bg-gray-25 shadow-md relative">
+    <nav className="flex bg-gray-100 items-center justify-between px-5 py-1 bg-gray-25 shadow-md relative">
       {/* Menu burger visible uniquement sur mobile */}
       <IoMdMenu className="text-2xl md:hidden" />
         <Image
