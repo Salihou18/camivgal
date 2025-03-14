@@ -6,10 +6,14 @@ import { useState } from 'react';
 import './globals.css';
 import MyContextProvider from '@/provider/MyContextProvider';
 import Body from '@/components/Body';
+//NEw
+import { appWithTranslation } from 'next-i18next';
+//TRES IMPORTANT
+import i18n from '@/i18next';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function RootLayout({ children }) {
+function RootLayout({ children }) {
   return (
     <html lang="en">
       <MyContextProvider>
@@ -18,4 +22,9 @@ export default function RootLayout({ children }) {
       </MyContextProvider>
     </html>
   );
+  
 }
+
+//NEW
+// Pour activer la traduction
+export default appWithTranslation(RootLayout);
