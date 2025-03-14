@@ -21,7 +21,7 @@ export default function CoteIvoire() {
       </div>
 
       {/* Description générale */}
-      <p className="mt-4 text-gray-600 text-center">
+      <p className="mt-4 text-center">
         La Côte d'Ivoire est un pays riche en diversité culturelle et en
         paysages époustouflants. Des plages idylliques aux parcs nationaux
         luxuriants, en passant par des monuments historiques impressionnants,
@@ -34,7 +34,7 @@ export default function CoteIvoire() {
       </h2>
       <div className="mt-4 space-y-6">
         {/* Assinie */}
-        <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-md p-4">
+        <div className="flex flex-col md:flex-row rounded-lg shadow-md p-4">
           <Image
             src="/img/assinie.webp"
             alt="Plage d'Assinie"
@@ -43,8 +43,8 @@ export default function CoteIvoire() {
             className="rounded-lg"
           />
           <div className="md:ml-6 mt-4 md:mt-0">
-            <h3 className="text-xl font-semibold text-gray-800">🏝️ Assinie</h3>
-            <p className="text-gray-600">
+            <h3 className="text-xl font-semibold ">🏝️ Assinie</h3>
+            <p className=" ">
               Station balnéaire prisée pour ses plages paradisiaques et ses
               lagunes paisibles. Assinie est idéale pour la détente et les
               activités nautiques.
@@ -53,7 +53,7 @@ export default function CoteIvoire() {
         </div>
 
         {/* Parc National de Taï */}
-        <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-md p-4">
+        <div className="flex flex-col md:flex-row rounded-lg shadow-md p-4">
           <Image
             src="/img/parc_tai.webp"
             alt="Parc National de Taï"
@@ -62,9 +62,7 @@ export default function CoteIvoire() {
             className="rounded-lg"
           />
           <div className="md:ml-6 mt-4 md:mt-0">
-            <h3 className="text-xl font-semibold text-gray-800">
-              🌳 Parc National de Taï
-            </h3>
+            <h3 className="text-xl font-semibold">🌳 Parc National de Taï</h3>
             <p className="text-gray-600">
               Un site classé UNESCO abritant une biodiversité unique, dont des
               chimpanzés et des éléphants pygmées.
@@ -73,7 +71,7 @@ export default function CoteIvoire() {
         </div>
 
         {/* Basilique de Yamoussoukro */}
-        <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-md p-4">
+        <div className="flex flex-col md:flex-row rounded-lg shadow-md p-4">
           <Image
             src="/img/basilique_yamoussoukro.webp"
             alt="Basilique de Yamoussoukro"
@@ -82,7 +80,7 @@ export default function CoteIvoire() {
             className="rounded-lg"
           />
           <div className="md:ml-6 mt-4 md:mt-0">
-            <h3 className="text-xl font-semibold text-gray-800">
+            <h3 className="text-xl font-semibold">
               🏛️ Basilique de Yamoussoukro
             </h3>
             <p className="text-gray-600">
@@ -93,7 +91,7 @@ export default function CoteIvoire() {
         </div>
 
         {/* Marché de Treichville */}
-        <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-md p-4">
+        <div className="flex flex-col md:flex-row rounded-lg shadow-md p-4">
           <Image
             src="/img/marche_treichville.webp"
             alt="Marché de Treichville"
@@ -102,9 +100,7 @@ export default function CoteIvoire() {
             className="rounded-lg"
           />
           <div className="md:ml-6 mt-4 md:mt-0">
-            <h3 className="text-xl font-semibold text-gray-800">
-              🧺 Marché de Treichville
-            </h3>
+            <h3 className="text-xl font-semibold">🧺 Marché de Treichville</h3>
             <p className="text-gray-600">
               Un marché animé à Abidjan, parfait pour découvrir l'artisanat
               ivoirien, les tissus et les spécialités locales.

@@ -1,56 +1,44 @@
 'use client';
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+  const [confirmationMessage, setConfirmationMessage] = useState('');
 
-  //variables pour la validation du formulaire
   const {
     register,
     handleSubmit,
-    getValues,
-    formState: { errors },
-    watch,
+    reset,
+    formState: { errors, isSubmitting },
   } = useForm({
-    defaultValues: {
-      nom: 'Salihou',
-    },
+    defaultValues: { nom: '' },
   });
 
-  const watchedPassword = watch('password');
+  const sendMail = async (data) => {
+    try {
+      const templateParams = {
+        nom: data.nom,
+        email: data.email,
+        objet: data.objet,
+        message: data.message,
+      };
 
- const sendMail = async () => {
-   try {
-     const data = getValues();
+      await emailjs.send(
+        'service_r5xdpwo',
+        'template_38y2ib5',
+        templateParams,
+        'CBEyuwpu_0GUrmeuT'
+      );
 
-     // Vérification des champs requis
-     if (!data.nom || !data.email || !data.objet || !data.message) {
-       console.error('Tous les champs doivent être remplis !');
-       return;
-     }
+      setConfirmationMessage('Votre message a été envoyé avec succès !');
+      reset();
 
-     // Paramètres pour EmailJS
-     const templateParams = {
-       nom: data.nom,
-       email: data.email,
-       objet: data.objet,
-       message: data.message,
-     };
-
-     // Envoi de l'email avec EmailJS
-     const response = await emailjs.send(
-       'service_r5xdpwo', // Service ID
-       'template_38y2ib5', // Template ID
-       templateParams,
-       'CBEyuwpu_0GUrmeuT' // User Public Key
-     );
-
-     console.log('Email envoyé avec succès!', response.status, response.text);
-   } catch (error) {
-     console.error("Échec de l'envoi de l'email:", error);
-   }
- };
-
+      setTimeout(() => setConfirmationMessage(''), 5000);
+    } catch (error) {
+      console.error("Échec de l'envoi de l'email:", error);
+    }
+  };
 
   return (
     <div className="flex justify-center mt-10 min-h-screen">
@@ -61,9 +49,7 @@ export default function Contact() {
         <label className="flex gap-2 flex-col">
           Nom:
           <input
-            {...register('nom', {
-              required: 'Champ obligatoire',
-            })} // Ajout de l'attribut nom
+            {...register('nom', { required: 'Champ obligatoire' })}
             type="text"
             className="border-2 rounded-lg p-2"
           />
@@ -71,17 +57,17 @@ export default function Contact() {
             <span className="text-red-500 text-xs">{errors.nom.message}</span>
           )}
         </label>
+
         <label className="flex gap-2 flex-col">
           Email:
           <input
             {...register('email', {
               required: 'Champ obligatoire',
               pattern: {
-                value:
-                  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                 message: 'Adresse email invalide',
               },
-            })} // Ajout de l'attribut email
+            })}
             type="text"
             className="border-2 rounded-lg p-2"
           />
@@ -89,79 +75,55 @@ export default function Contact() {
             <span className="text-red-500 text-xs">{errors.email.message}</span>
           )}
         </label>
+
         <label className="flex gap-2 flex-col">
           Objet:
           <input
-            {...register('objet')} // Ajout de l'attribut objet
+            {...register('objet', { required: 'Champ obligatoire' })}
             type="text"
             className="border-2 rounded-lg p-2"
           />
-        </label>
-        <label className="flex gap-2 flex-col">
-          Message:
-          <textarea
-            {...register('message')} // Ajout de l'attribut message
-            type="text"
-            className="border-2 rounded-lg p-2"
-            rows={5}
-          />
-        </label>
-        <label className="flex gap-2 flex-col">
-          Mot de passe:
-          <input
-            {...register('password', {
-              required: 'Champ obligatoire',
-              minLength: {
-                value: 8,
-                message: 'Minimum 8 caractères',
-              },
-            })} // Ajout de l'attribut password
-            type="text"
-            className="border-2 rounded-lg p-2"
-          />
-          {errors.password && (
-            <span className="text-red-500 text-xs">
-              {errors.password.message}
-            </span>
+          {errors.objet && (
+            <span className="text-red-500 text-xs">{errors.objet.message}</span>
           )}
         </label>
 
         <label className="flex gap-2 flex-col">
-          Confirmer mot de passe:
-          <input
-            {...register('rePassword', {
-              required: 'Champ obligatoire',
-              minLength: {
-                value: 8,
-                message: 'Minimum 8 caractères',
-              },
-              validate: (value) =>
-                value === watchedPassword ||
-                'Les mots de passe ne correspondent pas',
-            })} // Ajout de l'attribut rePassword
-            type="text"
+          Message:
+          <textarea
+            {...register('message', { required: 'Champ obligatoire' })}
             className="border-2 rounded-lg p-2"
+            rows={5}
           />
-          {
-            // Affichage du message d'erreur
-            errors.rePassword && (
-              <span className="text-red-500 text-xs">
-                {errors.rePassword.message}
-              </span>
-            )
-          }
+          {errors.message && (
+            <span className="text-red-500 text-xs">
+              {errors.message.message}
+            </span>
+          )}
         </label>
+
+        {confirmationMessage && (
+          <p className="text-green-600">{confirmationMessage}</p>
+        )}
+
+        {Object.keys(errors).length > 0 && (
+          <p className="text-red-500 text-sm">
+            Veuillez remplir tous les champs obligatoires.
+          </p>
+        )}
 
         <div className="flex justify-center gap-4 my-8">
           <input
             type="submit"
-            value="Envoyer"
+            value={isSubmitting ? 'Envoi...' : 'Envoyer'}
             className="bg-blue-600 text-white rounded-lg p-2 cursor-pointer hover:bg-blue-700"
+            disabled={isSubmitting}
           />
           <input
             type="button"
             value="Annuler"
-            className="bg-blue-600 text-white rounded-lg p-2 cursor-pointer hover:bg-blue-700"
+            className="bg-gray-600 text-white rounded-lg p-2 cursor-pointer hover:bg-gray-700"
+            onClick={() => reset()}
           />
         </div>
       </form>
