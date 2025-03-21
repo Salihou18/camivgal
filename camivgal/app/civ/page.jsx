@@ -8,6 +8,7 @@ export const metadata = {
     images: ['./react.webp'],
   },
 };
+
 export default function Page() {
   return <Cote_D_Ivoire />;
 }
