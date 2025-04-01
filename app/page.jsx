@@ -13,6 +13,7 @@ import TourismeCiv from '@/public/img/TourismeCiv.webp';
 import ServicesSection from '../components/ServicesSection';
 
 import { useMyContext } from '@/provider/MyContextProvider';
+
 export const metadata = {
   metadataBase: new URL ('http://acme.com'),
   title: 'Camivgal | Accueil',
