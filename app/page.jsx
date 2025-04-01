@@ -13,19 +13,18 @@ import TourismeCiv from '@/public/img/TourismeCiv.webp';
 import ServicesSection from '../components/ServicesSection';
 
 import { useMyContext } from '@/provider/MyContextProvider';
-
-export const metadata = {
-  metadataBase: new URL ('http://acme.com'),
-  title: 'Camivgal | Accueil',
-  description:
-    'Site web présentant les sites touristiques de trois diferrents pays africains.',
-  openGraph: {
-    title: 'Camivgal | Accueil',
-    description:
-      'Site web présentant les sites touristiques de trois diferrents pays africains .',
-    images: ['./react.webp'],
-  },
-};
+// export const metadata = {
+//   metadataBase: new URL ('http://acme.com'),
+//   title: 'Camivgal | Accueil',
+//   description:
+//     'Site web présentant les sites touristiques de trois diferrents pays africains.',
+//   openGraph: {
+//     title: 'Camivgal | Accueil',
+//     description:
+//       'Site web présentant les sites touristiques de trois diferrents pays africains .',
+//     images: ['./react.webp'],
+//   },
+// };
 
 export default function Home() {
   const { theme } = useMyContext();
