@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://locallhost:3000/</loc>
+        <loc>https://camivgal.vercel.app/</loc>
         <lastmod>2024-05-08</lastmod>
         <changefreq>never</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://locallhost:3000/activites</loc>
+        <loc>https://camivgal.vercel.app/activites</loc>
         <lastmod>2024-05-08</lastmod>
         <changefreq>never</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://locallhost:3000/cameroun</loc>
+        <loc>https://camivgal.vercel.app/cameroun</loc>
         <lastmod>2024-05-08</lastmod>
         <changefreq>never</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://locallhost:3000/civ</loc>
+        <loc>https://camivgal.vercel.app/civ</loc>
         <lastmod>2024-05-08</lastmod>
         <changefreq>never</changefreq>
         <priority>0.7</priority>
     </url>
      <url>
-        <loc>https://locallhost:3000/senegal</loc>
+        <loc>https://camivgal.vercel.app/senegal</loc>
         <lastmod>2024-05-08</lastmod>
         <changefreq>never</changefreq>
         <priority>0.7</priority>
     </url>
      <url>
-        <loc>https://locallhost:3000/contact</loc>
+        <loc>https://camivgal.vercel.app/contact</loc>
         <lastmod>2024-05-08</lastmod>
         <changefreq>never</changefreq>
         <priority>0.7</priority>
