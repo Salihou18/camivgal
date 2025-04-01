@@ -1,5 +1,7 @@
 import Contact from '@/components/Contact';
 export const metadata = {
+  metadataBase: new URL('http://acme.com'),
+
   title: 'contact | Camivgal',
   description: 'Page contact',
   openGraph: {

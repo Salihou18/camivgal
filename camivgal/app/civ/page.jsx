@@ -1,5 +1,7 @@
 import Cote_D_Ivoire from '@/components/Cote_D_Ivoire';
 export const metadata = {
+  metadataBase: new URL('http://acme.com'),
+
   title: 'civ | Camivgal',
   description: 'Page cote d ivoire',
   openGraph: {

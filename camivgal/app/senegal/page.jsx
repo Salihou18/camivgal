@@ -1,5 +1,7 @@
 import Senegal from '@/components/Senegal';
 export const metadata = {
+  metadataBase: new URL('http://acme.com'),
+
   title: 'senegal | Camivgal',
   description: 'Page senegal',
   openGraph: {
