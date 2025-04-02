@@ -12,16 +12,13 @@ export const useMyContext = () => {
 // Création du provider
 export default function MyContextProvider({ children }) {
   const [theme, setTheme] = useState('light');
-
   useEffect(() => {
     setTheme(localStorage.getItem('theme2') || 'light');
   });
-
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
     localStorage.setItem('theme2', theme === 'light' ? 'dark' : 'light');
   };
-
   return (
     <MyContext.Provider value={{ theme, toggleTheme }}>
       {children}
