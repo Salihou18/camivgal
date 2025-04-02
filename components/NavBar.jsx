@@ -1,12 +1,12 @@
-"use client";
+'use client';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown } from 'react-icons/io';
 //NEW
 //importer le hook useTranslation pour traduire les textes
 import { useTranslation } from 'react-i18next';
 
-export default function NavBar({ changePage }) {
+export default function NavBar({ mobileMode = false, onItemClick = () => {} }) {
   //NEW
   // Utiliser le hook useTranslation pour acceder à la fonction t
   const { t } = useTranslation('header');

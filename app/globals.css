@@ -34,3 +34,12 @@ body.dark {
     object-fit:cover;
     opacity: 0.7;
 }
+.md\:hidden:focus + .hidden.md\:flex {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--first-color);
+}
