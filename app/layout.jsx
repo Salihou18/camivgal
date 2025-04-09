@@ -22,6 +22,7 @@ import i18n from '@/i18next';
 //       'Site web présentant les sites touristiques de trois diferrents pays africains .',
 //     images: ['./react.webp'],
 //   },
+//   manifest: '/manifest.json',
 // };
 
 const inter = Inter({ subsets: ['latin'] });

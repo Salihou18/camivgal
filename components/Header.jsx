@@ -1,7 +1,8 @@
 'use client';
+
 import { IoMdMenu, IoMdClose } from 'react-icons/io';
 import NavBar from './NavBar';
-import MobileNavBar from './MobileNavBar'; // Import du nouveau composant
+import MobileNavBar from './MobileNavBar';
 import Image from 'next/image';
 import logo from '@/public/img/Logo.webp';
 import { IoSunny } from 'react-icons/io5';
@@ -31,12 +32,12 @@ export default function Header() {
           {isMenuOpen ? <IoMdClose /> : <IoMdMenu />}
         </button>
 
-        {/* NavBar Desktop  */}
+        {/* NavBar Desktop */}
         <div className="hidden md:block flex-grow justify-center">
           <NavBar />
         </div>
 
-        {/* Menu Mobile - Utilisation de MobileNavBar */}
+        {/* Menu Mobile */}
         {isMenuOpen && (
           <div className="md:hidden fixed inset-0 top-16 z-50 bg-black bg-opacity-50 backdrop-blur-sm">
             <div className="container mx-auto px-4 pt-2 pb-6">
